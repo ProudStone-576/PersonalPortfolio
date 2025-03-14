@@ -1,0 +1,534 @@
+/* ====================================================
+   Base Reset & Typography
+==================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: #0d0d0d;
+  color: #e0e0e0;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ====================================================
+   Header & Navigation
+==================================================== */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(5px);
+  transition: background 0.3s ease;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo img {
+  width: 50px;
+  margin-right: 15px;
+}
+
+.nav-bar {
+  display: flex;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin: 0 20px;
+  position: relative;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #e0e0e0;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background: #f39c12;
+  transition: width 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #f39c12;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+/* Hamburger Menu for Mobile */
+.nav-toggle {
+  display: none;
+  font-size: 1.8rem;
+  color: #e0e0e0;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav-bar {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    transform: translateY(-100%);
+    transition: transform 0.4s ease;
+  }
+  .nav-bar.active {
+    transform: translateY(0);
+  }
+  .nav-links {
+    flex-direction: column;
+    padding: 20px 0;
+  }
+  .nav-links li {
+    margin: 15px 0;
+  }
+  .nav-toggle {
+    display: block;
+  }
+}
+
+/* ====================================================
+   Hero Section
+==================================================== */
+/* Hero Section Container */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    padding: 0 20px;
+  }
+  
+  /* Gradient Background */
+  .gradient-background {
+    background: linear-gradient(45deg, #ff416c, #ff4b2b, #f9d423, #1a2a6c);
+    background-size: 400% 400%;
+    animation: gradientAnim 15s ease infinite;
+  }
+  @keyframes gradientAnim {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  /* Hero Overlay */
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+  }
+  
+  /* (Optional) Laser Canvas – remove if not needed */
+  #laserCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+  }
+  
+  /* Hero Content */
+  .hero-content {
+    position: relative;
+    z-index: 3;
+    max-width: 900px;
+    color: #fff;
+  }
+  
+  /* Animate-in Text */
+  .animate-text {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+  }
+  .delay-1 { animation-delay: 0.5s; }
+  .delay-2 { animation-delay: 1s; }
+  .delay-3 { animation-delay: 1.5s; }
+  @keyframes fadeIn {
+    to { opacity: 1; }
+  }
+  
+  /* Hero Name (with mouse movement) */
+  .hero-name {
+    font-size: 4.5rem;
+    margin-bottom: 20px;
+    text-shadow: 0 0 20px rgba(243, 156, 18, 0.8);
+    transition: transform 0.1s ease-out;
+  }
+  
+  /* Hero Subname */
+  .hero-subname {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    color: #e0e0e0;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Hero Description */
+  .hero-description {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #d0d0d0;
+  }
+  
+  /* Hero CTA Button */
+  .hero-cta {
+    position: relative;
+    font-size: 1.8rem;
+    padding: 12px 30px;
+    background: rgba(0, 0, 0, 0.4);
+    border: 2px solid #fff;
+    border-radius: 50px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  .hero-cta:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Button effect container */
+  .button-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+  
+  /* Laser-like flash effect on button hover */
+  .button-effect::before,
+  .button-effect::after {
+    content: "";
+    position: absolute;
+    width: 150%;
+    height: 3px;
+    background: #f39c12;
+    opacity: 0;
+    animation: none;
+  }
+  
+  .hero-cta:hover .button-effect::before {
+    animation: laserFlash 0.6s linear forwards;
+    top: 20%;
+    left: -25%;
+    transform: rotate(45deg) scaleX(0);
+  }
+  
+  .hero-cta:hover .button-effect::after {
+    animation: laserFlash2 0.6s linear forwards;
+    bottom: 20%;
+    left: -25%;
+    transform: rotate(-45deg) scaleX(0);
+  }
+  
+  @keyframes laserFlash {
+    0% { opacity: 0; transform: rotate(45deg) scaleX(0); }
+    50% { opacity: 1; transform: rotate(45deg) scaleX(1.5); }
+    100% { opacity: 0; transform: rotate(45deg) scaleX(0); }
+  }
+  
+  @keyframes laserFlash2 {
+    0% { opacity: 0; transform: rotate(-45deg) scaleX(0); }
+    50% { opacity: 1; transform: rotate(-45deg) scaleX(1.5); }
+    100% { opacity: 0; transform: rotate(-45deg) scaleX(0); }
+  }
+  
+  
+/* ====================================================
+   Marquee
+==================================================== */
+.marquee {
+  overflow: hidden;
+  margin-top: 30px;
+}
+
+.marquee-content {
+  display: flex;
+  white-space: nowrap;
+  animation: marqueeAnim 20s linear infinite;
+}
+
+.text-item {
+  margin: 0 40px;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+@keyframes marqueeAnim {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+/* ====================================================
+   Divider
+==================================================== */
+.divider-two {
+  border: 0;
+  height: 3px;
+  background: #f39c12;
+  margin: 100px 0;
+}
+
+/* ====================================================
+   Resume Sections
+==================================================== */
+.resume-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.resume-section h2 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.resume-section h2:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 4px;
+  background: #f39c12;
+}
+
+.resume-list {
+  list-style: none;
+  margin-top: 30px;
+  text-align: left;
+  max-width: 900px;
+  margin: 30px auto;
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+.resume-list li {
+  margin-bottom: 15px;
+  border-bottom: 1px dashed rgba(243, 156, 18, 0.5);
+  padding-bottom: 10px;
+}
+
+/* ====================================================
+   Projects Section
+==================================================== */
+.middle-work {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.middle-work-heading {
+  font-size: 2.8rem;
+  margin-bottom: 40px;
+}
+
+.middle-work-visuals {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  perspective: 1000px;
+}
+
+.project-card {
+  background: #1a1a1a;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.project-card:hover {
+  transform: rotateY(10deg) rotateX(10deg);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.8);
+}
+
+.project-card img {
+  width: 100%;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.05);
+}
+
+.project-info {
+  padding: 25px;
+  text-align: left;
+}
+
+.project-info h3 {
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+  color: #f39c12;
+}
+
+.project-info p {
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+/* ====================================================
+   Footer
+==================================================== */
+footer {
+  background: #000;
+  color: #e0e0e0;
+  padding: 50px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.footer-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.footer-font-light {
+  color: #f39c12;
+}
+
+.footer-text p {
+  margin-bottom: 25px;
+}
+
+.mail {
+  text-decoration: none;
+  color: #e0e0e0;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.mail:hover {
+  color: #f39c12;
+}
+
+.footer-social-privacy {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin: 30px 0;
+}
+
+.footer-socials,
+.footer-policy {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-socials li,
+.footer-policy li {
+  margin-bottom: 12px;
+}
+
+.footer-socials li a,
+.footer-policy li a {
+  color: #e0e0e0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-socials li a:hover,
+.footer-policy li a:hover {
+  color: #f39c12;
+}
+
+.footer-grey-line {
+  border: 0;
+  height: 2px;
+  background: #444;
+  margin: 30px 0;
+}
+
+.footer-copyright {
+  font-size: 0.9rem;
+  margin-top: 15px;
+}
+
+/* ====================================================
+   Extra: 3D Rotating Cube
+==================================================== */
+#cube {
+  width: 60px;
+  height: 60px;
+  background: #f39c12;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transform-style: preserve-3d;
+  animation: cubeRotate 6s infinite linear;
+}
+
+@keyframes cubeRotate {
+  0% { transform: rotateX(0deg) rotateY(0deg); }
+  50% { transform: rotateX(180deg) rotateY(180deg); }
+  100% { transform: rotateX(360deg) rotateY(360deg); }
+}
+
+#container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* ====================================================
+   Responsive Adjustments
+==================================================== */
+@media (max-width: 768px) {
+  .hero-name { font-size: 3rem; }
+  .hero-subname { font-size: 1.5rem; }
+  .hero-cta { font-size: 1.2rem; padding: 10px 20px; }
+  .resume-section h2 { font-size: 2.2rem; }
+  .resume-list li { font-size: 1rem; }
+  .middle-work-heading { font-size: 2.2rem; }
+}
+
+
+  

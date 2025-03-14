@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taran Matharu - Insane Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+  <script src="main.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+          <div class="nav-logo">
+            <img src="images/logo.png" alt="Logo">
+            <h2>Taran Matharu</h2>
+          </div>
+          <nav class="nav-bar">
+            <ul class="nav-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="lab.html">Lab</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+          <div class="nav-toggle">
+            <i class="fas fa-bars"></i>
+          </div>
+        </div>
+      </header>
+      <!-- Hero Section with Advanced Animation -->
+      <div class="hero-section gradient-background">
+        <!-- (Optional) Canvas Laser Effects can be kept or removed as desired -->
+        <canvas id="laserCanvas"></canvas>
+        
+        <!-- Static Overlay -->
+        <div class="hero-overlay"></div>
+        
+        <!-- Hero Content -->
+        <div class="hero-content">
+          <h1 class="hero-name animate-text">Taran Matharu</h1>
+          <h2 class="hero-subname animate-text delay-1">Senior Data Scientist &amp; Web Developer</h2>
+          <p class="hero-description animate-text delay-2">
+            Transforming complex challenges into sleek, innovative solutions.
+          </p>
+          <button class="hero-cta animate-text delay-3">
+            <span>Let's Collaborate</span>
+            <div class="button-effect"></div>
+          </button>
+        </div>
+      </div>
+      
+      
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+          <span></span>
+        </div>
+      </div>
+      
+    <div class="marquee">
+      <div class="marquee-content">
+        <span class="text-item">&bull; AI & ML Mastery</span>
+        <span class="text-item">&bull; Deep Learning Specialist</span>
+        <span class="text-item">&bull; Innovative Web Solutions</span>
+        <span class="text-item">&bull; Data-Driven Insights</span>
+        <span class="text-item">&bull; Agile Problem Solver</span>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider-two">
+
+  <!-- Work Experience Section -->
+  <div class="middle-quotation-codeeditor">
+    <div class="resume-section">
+      <h2 class="front-sub-name middle-one-quotation"><i class="fas fa-briefcase"></i> Work Experience</h2>
+      <ul class="resume-list">
+        <li>Designed & implemented multiple machine learning models for real-world data analysis and predictive modeling.</li>
+        <li>Developed an AI-powered heart disease detection model using Python, Scikit-Learn, and Pandas.</li>
+        <li>Built a deep learning-based dog breed classifier using CNNs & transfer learning (ResNet, EfficientNet).</li>
+        <li>Deployed a food recognition AI system (FoodVision) replicating a Google Brain research paper.</li>
+        <li>Applied data engineering techniques including data cleaning, feature selection, and hyperparameter tuning.</li>
+        <li>Worked with SQL, MySQL, and visualization tools (Tableau, Power BI) to analyze and present insights.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Projects Section with Animated Project Cards -->
+  <div class="middle-work">
+    <h1 class="middle-work-heading">Projects</h1>
+    <div class="middle-work-visuals">
+      <div class="project-card">
+        <img class="middle-work-img" src="images/heart_disease.png" alt="Heart Disease Prediction Model">
+        <div class="project-info">
+          <h3>Heart Disease Prediction Model</h3>
+          <p>ML model using Scikit-Learn to predict heart disease risk. Optimized via feature engineering and hyperparameter tuning.</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <img class="middle-work-img" src="images/bulldozer.png" alt="Bulldozer Price Prediction">
+        <div class="project-info">
+          <h3>Bulldozer Price Prediction</h3>
+          <p>Regression model with XGBoost & Random Forest to estimate bulldozer resale value, enhanced with feature selection.</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <img class="middle-work-img" src="images/dog_vision.png" alt="Dog Vision">
+        <div class="project-info">
+          <h3>Dog Vision</h3>
+          <p>Deep learning model using CNNs & transfer learning to classify 100+ dog breeds, deployed as a real-time web app.</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <img class="middle-work-img" src="images/food_vision.png" alt="Food Vision">
+        <div class="project-info">
+          <h3>Food Vision</h3>
+          <p>Computer vision model using PyTorch & TensorFlow to identify 100+ foods by replicating a Google Brain research paper.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider-two">
+
+  <!-- Education Section -->
+  <div class="middle-quotation-codeeditor">
+    <div class="resume-section">
+      <h2 class="front-sub-name middle-one-quotation"><i class="fas fa-graduation-cap"></i> Education</h2>
+      <ul class="resume-list">
+        <li><strong>University of the Fraser Valley</strong> – Diploma of Computer Information Systems (GPA: 3.6, Dean's List) | Abbotsford, BC</li>
+        <li><strong>Indian Institute of Technology (IIT) Madras</strong> – Bachelor’s in Data Science</li>
+      </ul>
+    </div>
+  </div>
+
+  <hr class="divider-two">
+
+  <!-- Skills & Certifications Section -->
+  <div class="middle-quotation-codeeditor">
+    <div class="resume-section">
+      <h2 class="front-sub-name middle-one-quotation"><i class="fas fa-tools"></i> Skills & Certifications</h2>
+      <ul class="resume-list">
+        <li><strong>Certifications:</strong> CompTIA A+, CompTIA Network+, CompTIA Security+</li>
+        <li><strong>Programming Languages:</strong> Python (Expert), SQL (Expert), R (Intermediate), Java (Advanced), JavaScript (Advanced)</li>
+        <li><strong>AI & ML:</strong> TensorFlow, PyTorch, Scikit-Learn, Deep Learning, NLP, Computer Vision</li>
+        <li><strong>Data Engineering:</strong> Apache Spark, Hadoop, ETL Pipelines, Data Warehousing</li>
+        <li><strong>BI & Visualization:</strong> Tableau, Power BI, Matplotlib, Seaborn</li>
+        <li><strong>Cloud & DevOps:</strong> AWS (S3, Lambda, EC2), Docker, Kubernetes, Apache Airflow</li>
+        <li><strong>Soft Skills:</strong> Analytical Thinking, Problem-Solving, Communication, Leadership, Team Collaboration, Adaptability</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-text">
+      <h1 class="footer-font-inter">Innovating for a <span class="footer-font-light">Brighter</span> &ndash; Tomorrow.</h1>
+      <p>Hey, Need Help? Leave us a message!</p>
+      <a class="mail" href="mailto:calan.webdev@gmail.com">
+        <i class="fa-solid fa-envelope"></i> calan.webdev@gmail.com
+      </a>
+    </div>
+    <hr class="footer-grey-line">
+    <div class="footer-social-privacy">
+      <ul class="footer-socials">
+        <li><i class="fa-brands fa-instagram"></i> Instagram</li>
+        <li><i class="fa-brands fa-github"></i> Github</li>
+        <li><i class="fa-brands fa-youtube"></i> Youtube</li>
+        <li><i class="fa-brands fa-linkedin"></i> LinkedIn</li>
+        <li><i class="fa-brands fa-dev"></i> Dev.to</li>
+      </ul>
+      <ul class="footer-policy">
+        <li><i class="fa-solid fa-shield-alt"></i> Privacy Policy</li>
+        <li><i class="fa-solid fa-file-contract"></i> Terms & Conditions</li>
+      </ul>
+    </div>
+    <div class="footer-copyright">
+      <p>&copy; 2024 &ndash; All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div id="container"></div>
+  <div id="cube"></div>
+  
+
+
+  <script>
+    // Basic JS for toggling mobile menu
+    const navToggle = document.querySelector('.nav-toggle');
+    const navBar = document.querySelector('.nav-bar');
+    navToggle.addEventListener('click', () => {
+      navBar.classList.toggle('active');
+
+
+    });
+
+    const canvas = document.getElementById('laserCanvas');
+    const ctx = canvas.getContext('2d');
+    
+    // Resize canvas to fill hero section
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+    
+    // Array to store laser particles
+    let lasers = [];
+    
+    // Spawn several laser particles at (x, y)
+    function spawnLasers(x, y) {
+      const count = 10; // Number of lasers per mouse event
+      for (let i = 0; i < count; i++) {
+        const angle = Math.random() * Math.PI * 2;
+        const speed = Math.random() * 3 + 2;
+        lasers.push({
+          x: x,
+          y: y,
+          vx: Math.cos(angle) * speed,
+          vy: Math.sin(angle) * speed,
+          life: Math.random() * 20 + 20, // frames until fade-out
+          maxLife: 40,
+          // Colors in a fiery palette reminiscent of dragon lasers
+          color: `rgba(${Math.floor(Math.random() * 55 + 200)}, ${Math.floor(Math.random() * 100)}, 0, 1)`
+        });
+      }
+    }
+    
+    // Listen for mouse movement over hero section
+    document.querySelector('.hero-section').addEventListener('mousemove', function(e) {
+      const rect = canvas.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      spawnLasers(x, y);
+    });
+    
+    // Update laser positions and fade them out
+    function updateLasers() {
+      for (let i = lasers.length - 1; i >= 0; i--) {
+        const l = lasers[i];
+        l.x += l.vx;
+        l.y += l.vy;
+        l.life -= 1;
+        if (l.life <= 0) {
+          lasers.splice(i, 1);
+        }
+      }
+    }
+    
+    // Draw the lasers on canvas
+    function drawLasers() {
+      // Clear with a semi-transparent fill for a trail effect
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.15)';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      
+      lasers.forEach(laser => {
+        ctx.beginPath();
+        // Laser beam: a short line segment
+        ctx.moveTo(laser.x, laser.y);
+        ctx.lineTo(laser.x - laser.vx * 5, laser.y - laser.vy * 5);
+        
+        // Use a glow effect
+        ctx.lineWidth = 2;
+        ctx.shadowBlur = 10;
+        ctx.shadowColor = laser.color;
+        
+        // Adjust alpha based on remaining life
+        const alpha = laser.life / laser.maxLife;
+        const color = laser.color.replace(/,\s*1\)$/, `, ${alpha.toFixed(2)})`);
+        ctx.strokeStyle = color;
+        ctx.stroke();
+        ctx.shadowBlur = 0;
+      });
+    }
+    
+    // Main animation loop
+    function animate() {
+      updateLasers();
+      drawLasers();
+      requestAnimationFrame(animate);
+    }
+    animate();
+    
+      // Make the hero name follow the mouse cursor with a subtle parallax effect
+      document.addEventListener('mousemove', (e) => {
+        const heroName = document.querySelector('.hero-name');
+        if (heroName) {
+          const centerX = window.innerWidth / 2;
+          const centerY = window.innerHeight / 2;
+          // Adjust the factor (0.03) for desired movement intensity
+          const offsetX = (e.clientX - centerX) * 0.03;
+          const offsetY = (e.clientY - centerY) * 0.03;
+          heroName.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
+        }
+      });
+
+  
+  </script>
+</body>
+</html>
